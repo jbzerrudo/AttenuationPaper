@@ -1,0 +1,24 @@
+PySR-Discovered TC Wind Decay Equation (Philippine Landfalls)
+=================================================================
+
+V(t) = V0*(-0.00014813543)*V0*t_hours + V0
+
+Variables:
+  t_hours  = hours after landfall
+  V0       = maximum sustained wind at landfall (kt, 1-min)
+  h_max    = max terrain elevation within 50 km of TC center (m)
+  h_mean   = mean terrain elevation within 50 km of TC center (m)
+  STORM_SPD = translational speed of TC (kt)
+
+Performance:
+  R²   = 0.8784
+  RMSE = 9.68 kt
+  MAE  = 6.30 kt
+  N    = 1117 data points, multiple storms
+
+Kaplan & DeMaria (1995) baseline on same data:
+  R²   = 0.8768
+  RMSE = 9.74 kt
+  MAE  = 6.47 kt
+
+RMSE improvement: 0.7%
