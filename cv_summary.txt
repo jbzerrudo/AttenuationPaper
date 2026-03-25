@@ -1,0 +1,58 @@
+5-Fold Cross-Validation Results
+============================================================
+Data: 1117 points, 174 storms
+
+PER-FOLD RESULTS:
+Fold      KD95        C9       C11       C15  p(KD95vC11)
+          RMSE      RMSE      RMSE      RMSE
+------------------------------------------------------------
+   1      9.20      9.57      9.25      9.30       0.8311
+   2     10.75      9.96     10.05      9.42       0.0819
+   3      8.94      8.10      8.25      7.90       0.0014
+   4     12.44     12.36     11.47     11.51       0.0004
+   5      7.77      9.29      8.15      7.82       0.2786
+------------------------------------------------------------
+  KD95   mean RMSE: 9.82 ± 1.81 kt
+  C9     mean RMSE: 9.85 ± 1.56 kt
+  C11    mean RMSE: 9.43 ± 1.38 kt
+  C15    mean RMSE: 9.19 ± 1.50 kt
+
+FITTED PARAMETERS PER FOLD:
+  KD95 Vb:    39.13 ± 1.16
+  KD95 R:     1.0000 ± 0.0000
+  KD95 alpha: 0.0394 ± 0.0020
+  C11 a:      0.000135 ± 0.000005
+
+WIN COUNT (lower RMSE):
+  C11 beats KD95: 3/5 folds
+  C15 beats KD95: 3/5 folds
+
+PAIRED T-TEST (fold-level RMSE, KD95 vs C11):
+  p-value: 0.2073 (Not significant)
+
+STRATIFIED RMSE (aggregated across all CV folds)
+============================================================
+
+  TS (34-63 kt) (N=468):
+    KD95: 7.54 kt  |  C11: 7.20 kt  |  C15: 7.09 kt
+    C11 vs KD95: +0.35 kt
+
+  Cat 1-2 (64-95 kt) (N=304):
+    KD95: 10.08 kt  |  C11: 9.75 kt  |  C15: 9.61 kt
+    C11 vs KD95: +0.34 kt
+
+  Cat 3+ (>=96 kt) (N=345):
+    KD95: 12.18 kt  |  C11: 11.63 kt  |  C15: 11.20 kt
+    C11 vs KD95: +0.55 kt
+
+  Low terrain (h_mean < 100m) (N=384):
+    KD95: 11.30 kt  |  C11: 10.73 kt  |  C15: 10.45 kt
+    C11 vs KD95: +0.57 kt
+
+  Medium terrain (100-300m) (N=495):
+    KD95: 8.91 kt  |  C11: 8.62 kt  |  C15: 8.42 kt
+    C11 vs KD95: +0.28 kt
+
+  High terrain (>=300m) (N=238):
+    KD95: 9.26 kt  |  C11: 8.88 kt  |  C15: 8.68 kt
+    C11 vs KD95: +0.39 kt
