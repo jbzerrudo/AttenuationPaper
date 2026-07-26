@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: >-
+  Code and data for "How Much Do Mountains Matter? Revisiting the
+  Kaplan-DeMaria Model for Terrain-Dependent Tropical Cyclone Wind
+  Decay in the Philippines"
+message: Please cite both the paper and this archived repository.
+type: software
+authors:
+  - given-names: Jef
+    family-names: Zerrudo
+    email: jbzerrudo@pagasa.dost.gov.ph
+    affiliation: >-
+      Department of Science and Technology - Philippine Atmospheric,
+      Geophysical and Astronomical Services Administration (PAGASA),
+      Quezon City, Philippines
+  - given-names: Nathaniel T.
+    family-names: Servando
+    affiliation: >-
+      Department of Science and Technology - Philippine Atmospheric,
+      Geophysical and Astronomical Services Administration (PAGASA),
+      Quezon City, Philippines
+license: MIT
+repository-code: https://github.com/jbzerrudo/AttenuationPaper
+keywords:
+  - tropical cyclone
+  - wind decay
+  - orography
+  - symbolic regression
+  - Philippines

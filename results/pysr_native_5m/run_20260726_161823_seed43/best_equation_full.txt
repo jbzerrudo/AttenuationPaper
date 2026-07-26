@@ -1,0 +1,6 @@
+Run: run_20260726_161823_seed43
+V(t) = V0*(0.9841488 - 0.00014970185*V0*t_hours)
+PySR:  R2=0.8662  RMSE=9.85  MAE=6.47
+KD95:  R2=0.8593  RMSE=10.10  MAE=6.45
+Improvement: 2.5%
+N=453  Elapsed=1197.1s

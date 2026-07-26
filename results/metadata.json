@@ -1,0 +1,33 @@
+{
+  "stamp": "2026-07-26 | terrain=hmean_rad75",
+  "n_3hourly": [
+    1100,
+    174
+  ],
+  "n_native6h": [
+    453,
+    121
+  ],
+  "rigor": {
+    "bootstrap_dRMSE": 0.6027190212240399,
+    "bootstrap_dRMSE_CI95": [
+      0.09569584339270203,
+      1.0274129747467704
+    ],
+    "bootstrap_p_dRMSE_le0": 0.0105,
+    "bootstrap_a": 0.00014288526547550723,
+    "bootstrap_a_CI95": [
+      0.00012741067163577556,
+      0.0001601864586312937
+    ],
+    "dvorak_MC_win_frac": 0.936,
+    "dvorak_MC_dRMSE_median": 0.21450719945884966,
+    "LOSO_KD95": 10.36747904248864,
+    "LOSO_C11": 9.64743873967935,
+    "temporal_split_year": 1999,
+    "temporal_KD95": 10.323039592710272,
+    "temporal_C11": 9.140501229214125,
+    "ML_RandomForest": 11.114509795023796,
+    "ML_GradientBoosting": 10.258131047423953
+  }
+}

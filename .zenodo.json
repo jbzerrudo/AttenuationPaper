@@ -1,0 +1,31 @@
+{
+  "title": "Code and data for: How Much Do Mountains Matter? Revisiting the Kaplan-DeMaria Model for Terrain-Dependent Tropical Cyclone Wind Decay in the Philippines",
+  "description": "<p>Analysis scripts, derived datasets, per-fold predictions and result tables supporting Zerrudo and Servando, submitted to <i>Weather and Forecasting</i> (WAF-D-26-0060).</p><p>Symbolic regression applied to 453 native 6-hourly overland points from 121 Philippine tropical cyclone landfalls (1977-2022) recovers V(t) = V0[1 - a(V0 t + h)], with h the mean bare-earth elevation within a 75 km circle. Storm-stratified five-fold cross-validation gives 9.22 kt against 9.86 kt for the constant-rate baseline.</p><p>IBTrACS and the NAMRIA IfSAR digital terrain model are not redistributed here.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Zerrudo, Jef",
+      "affiliation": "DOST-PAGASA, Quezon City, Philippines"
+    },
+    {
+      "name": "Servando, Nathaniel T.",
+      "affiliation": "DOST-PAGASA, Quezon City, Philippines"
+    }
+  ],
+  "keywords": [
+    "tropical cyclone",
+    "wind decay",
+    "orography",
+    "symbolic regression",
+    "Philippines",
+    "Kaplan-DeMaria"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/jbzerrudo/AttenuationPaper",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
