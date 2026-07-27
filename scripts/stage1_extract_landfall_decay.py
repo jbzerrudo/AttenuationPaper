@@ -17,7 +17,7 @@ from pathlib import Path
 # ──────────────────────────────────────────────────
 # CONFIG
 # ──────────────────────────────────────────────────
-INPUT_CSV = r"D:\2026\ATTENUATE\RevisionsFolder\Dataset\PAR_1977_2023.csv"          # adjust path as needed
+INPUT_CSV = r"D:\2026\ATTENUATE\RevisionsFolder\Dataset\CSV\PAR_1977_2023.csv"          # adjust path as needed
 OUTPUT_CSV = r"D:\2026\ATTENUATE\OUTS\ph_landfall_decay.csv"
 
 # Philippine bounding box
