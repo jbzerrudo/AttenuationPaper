@@ -17,7 +17,7 @@ and reproduces, in order:
       the stratified bias decomposition, the land-fraction median (0.53),
       and the predictor correlations;
   (B) the paired gains over 60 repeated storm-stratified 5-fold splits
-      (the -0.045 kt and +0.18 kt increments quoted in Section 3e);
+      (the -0.05 kt and +0.11 kt increments quoted in Section 3e);
   (C) the storm-clustered bootstrap of the joint fit
       (hbar coefficient 1.62e-4, CI [0.38, 2.97]e-4;
        land-fraction coefficient CI [-5.6, +3.7]e-2).
