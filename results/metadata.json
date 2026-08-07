@@ -27,7 +27,7 @@
     "temporal_split_year": 1999,
     "temporal_KD95": 10.323039592710272,
     "temporal_C11": 9.140501229214125,
-    "ML_RandomForest": 11.114509795023796,
-    "ML_GradientBoosting": 10.258131047423953
+    "ML_RandomForest": 10.83647707862771,
+    "ML_GradientBoosting": 10.432398596083916
   }
 }

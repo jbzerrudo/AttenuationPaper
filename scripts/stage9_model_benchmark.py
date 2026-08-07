@@ -28,13 +28,13 @@ from sklearn.linear_model import LinearRegression
 
 np.seterr(all="ignore")
 
-POINTS = r"D:\2026\ATTENUATE\RevisionsFolder\Dataset\CSV\ph_decay_with_terrain_5m_circ.csv"
-OUT = r"D:\2026\ATTENUATE\RevisionsFolder\Dataset\CSV\model_benchmark.csv"
+POINTS = "data/ph_decay_with_terrain_5m_circ.csv"
+OUT = "results/model_benchmark.csv"
 TERRAIN_COL = "hmean_rad75"
 
 PUBLISHED = {"C11": 9.22, "KD95_rate_terrain": 9.63, "KD95": 9.86,
-             "GradientBoostedTrees": 10.26, "RandomForest": 11.11,
-             "GAM": 12.13, "MultipleLinearRegression": 12.14}
+             "GradientBoostedTrees": 10.43, "RandomForest": 10.84,
+             "GAM": 11.89, "MultipleLinearRegression": 12.14}
 
 
 def kd95(X, Vb, R, al):
@@ -126,6 +126,6 @@ print("\n  model                         common folds   Table 4   difference")
 for _, r in R.iterrows():
     flag = "" if abs(r.difference) < 0.005 else "   <- differs"
     print(f"  {r.model:28s} {r.RMSE:8.3f}   {r.published:8.2f}   {r.difference:+7.3f}{flag}")
-print("\nThe three that differ are the models whose folds were not the common ones in "
-      "the original run, plus the GAM, whose smoothing is set here explicitly.")
+print("\nAll rows should agree with Table 4 to rounding; v1.0.2 refreshed the "
+      "published column to the revised common-fold benchmark.")
 print(f"\nwrote {OUT}")

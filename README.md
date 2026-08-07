@@ -45,14 +45,40 @@ need only pandas, numpy and scipy and run in seconds to minutes, except step 10,
 which also needs scikit-learn and pygam, and step 7, which needs PySR and takes two
 to four hours.
 
-Two scripts print numbers that differ slightly from the submitted manuscript, and
-both say so in their own headers rather than hiding it: `stage8` because the text's
-word "exactly" understates the agreement once IBTrACS's 1-kt storage rounding is
-allowed, and `stage9` because random forest and gradient boosting were originally
-scored on a different fold split from the rest of Table 4.
+Historical note, resolved in v1.0.2: the revised manuscript now states the
+interpolation agreement "to within the 1-kt precision at which the archive stores
+them" (so the old `stage8` caveat about the word "exactly" no longer applies), and
+Table 4 now reports all seven models on the common fold split, which `stage9`
+reproduces to rounding (see `results/model_benchmark.csv`).
 
 Set `TEST_N = 0` in `stage2_resample_5m_circ.py` for a full run. It ships at 0,
 but check it, because a value of 15 processes only the first fifteen points.
+
+## Changes in v1.0.2 (August 2026)
+
+* `scripts/lf_test2.py` rewritten to read the released archive
+  (`ph_decay_with_terrain_archive.csv`, `in_analysis == True`, the re-referenced
+  `t_used`/`V0_used` columns, and `data/fold_map.csv`). It now reproduces every
+  published land-fraction number: the fold-mean quartet 9.70/9.48/9.25/9.31, the
+  stratified bias decomposition, the median land fraction 0.53, and the
+  storm-clustered coefficient bootstrap. The v1.0.1 copy read a pre-revision
+  points file with `t_hours`/`V0` referencing and did not.
+* `scripts/global_fits.py` likewise now reads the archive and uses the reported
+  75-km terrain predictor; it reproduces the Section 2c global fits
+  (Vb = 39.1 kt, R = 1.00, alpha = 0.043/hr, in-sample RMSE 10.10 kt), the
+  3-hourly sensitivity fit (39.0/1.00/0.039), and the dimensional
+  two-coefficient fit.
+* `scripts/stage9_model_benchmark.py` now uses repository-relative paths and its
+  published-value column matches the revised Table 4; its output is shipped as
+  `results/model_benchmark.csv`.
+* `results/rigor_suite.csv` and `results/metadata.json`: the two machine-learning
+  entries were refreshed to the common-fold benchmark of Table 4
+  (RandomForest 10.84, GradientBoosting 10.43); v1.0.1 carried values from a
+  superseded split.
+* Added `scripts/fig_s1_one_to_one.py`, which builds supplemental Fig. S1 from
+  `data/oos_predictions.csv` (`figures/fig_one_to_one_diagnostic.png`).
+* The three corrected scripts run from the repository root with relative paths;
+  the remaining stage scripts still document their original absolute paths.
 
 ## Source data, not redistributed here
 
